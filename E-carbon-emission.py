@@ -15,8 +15,16 @@ stacked_data = pd.DataFrame({
     "類別": ["原料", "電力", "上游運輸"] * 3,
     "碳排放量": [15474.602, 3515.320, 142, 12568.338, 2895.11, 113, 14585.895, 3105.22, 152]
 })
-fig1 = px.bar(stacked_data, x="月份", y="碳排放量(T)", color="類別", title="各類別碳排放堆疊圖", text_auto=True)
-st.plotly_chart(fig1, use_container_width=True)
+
+fig1 = px.bar(
+    stacked_data,
+    x="月份",
+    y="碳排放量(T)",
+    color="類別",
+    title="各類別碳排放堆疊圖"
+)
+fig1.update_traces(texttemplate='%{y:.0f}', textposition='inside')
+
 
 # ✅ 廠區碳排圓餅圖
 plant_data = pd.DataFrame({
