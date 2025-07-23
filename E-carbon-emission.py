@@ -60,6 +60,25 @@ fig5 = px.pie(renewable_data, names="來源", values="占比", title="再生能�
 st.subheader("🔋 再生能源使用占比")
 st.plotly_chart(fig5, use_container_width=True)
 
+# 📄 預覽原始 HTML 結構（從內嵌HTML）
+st.subheader("🌐 HTML 範例頁預覽（靜態展示）")
+html_code = """
+<main class="container mt-4">
+  <section class="mb-4">
+    <h2>📈 每月碳排放趨勢</h2>
+    <p>（此區為 HTML 原稿示意，非即時圖表）</p>
+  </section>
+  <section class="row mb-4">
+    <div class="col-md-6">
+      <h2>🏭 廠區別碳排佔比</h2>
+    </div>
+    <div class="col-md-6">
+      <h2>⚙️ 製程別碳排佔比</h2>
+    </div>
+  </section>
+</main>
+"""
+components.html(html_code, height=250)
 
 # 📤 匯出按鈕（僅示意）
 st.markdown("#### ⬇️ 資料匯出")
