@@ -21,7 +21,7 @@ fig1 = px.bar(
     x="月份",
     y="碳排放量(T)",
     color="類別",
-    title="各類別碳排放堆疊圖"
+    title="📊 每月碳排放趨勢 "
 )
 fig1.update_traces(texttemplate='%{y:.0f}', textposition='inside')
 
