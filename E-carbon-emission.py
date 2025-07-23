@@ -17,3 +17,17 @@ data = pd.DataFrame({
 })
 fig = px.line(data, x="月份", y="碳排放量（tCO₂e）", title="每月碳排放趨勢")
 st.plotly_chart(fig, use_container_width=True)
+
+
+
+st.subheader("📈 每月碳排放趨勢")
+st.plotly_chart(fig1)
+
+col1, col2 = st.columns(2)
+with col1:
+    st.subheader("🏭 廠區碳排佔比")
+    st.plotly_chart(fig2)
+
+with col2:
+    st.subheader("⚙️ 製程碳排佔比")
+    st.plotly_chart(fig3)
