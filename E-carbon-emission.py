@@ -19,12 +19,13 @@ stacked_data = pd.DataFrame({
 fig1 = px.bar(
     stacked_data,
     x="月份",
-    y="碳排放量T",
+    y="碳排放量T",  # ✅ 這裡修正欄位名稱
     color="類別",
-    title="每月碳排放趨勢"
+    title="各類別碳排放堆疊圖"
 )
 fig1.update_traces(texttemplate='%{y:.0f}', textposition='inside')
 
+st.plotly_chart(fig1, use_container_width=True)
 
 # ✅ 廠區碳排圓餅圖
 plant_data = pd.DataFrame({
